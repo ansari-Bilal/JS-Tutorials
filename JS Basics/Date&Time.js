@@ -1,6 +1,9 @@
 
 // Date and Time........
 
+
+// Time in JS is calculated in milisec from  "1 January,1970". This date is also called Unix Epoch.
+
 // let date=new Date()
 // console.log(date.toString());       // diff functions related to date
 // console.log(date.toTimeString());
