@@ -1,0 +1,52 @@
+html {
+    margin: 0;
+  }
+
+  .bodyColor{
+    background-color: #212121;
+    color: #fff;
+  }
+
+  span {
+    display: block;
+  }
+
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+  
+  #red {
+    background: red;
+  }
+  
+  #green {
+    background: green;
+  }
+  #blue {
+    background: blue;
+  }
+  #pink {
+    background: pink;
+  }
+  #orange {
+    background: orange;
+  }
+  #violet {
+    background: violet;
+  }
+  #white {
+    background: white;
+  }
+  #purple {
+    background: purple;
+  }
+  
