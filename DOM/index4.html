@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+
+<body style="background-color: #212121; color:#fff">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const list = document.createElement('li');
+        list.innerHTML = `${langName}`;
+        document.querySelector('.lang').appendChild(list);
+    }
+    addLang("Java")
+    addLang("Python")
+    addLang("php")
+
+
+    function optimizedFunction(langName) {
+        const list = document.createElement('li');
+        const listItem = document.createTextNode(`${langName}`);   //above function can be enhanced using this way
+        list.appendChild(listItem);
+        document.querySelector('.lang').appendChild(list);
+    }
+    optimizedFunction("C#")
+    optimizedFunction("RUby")
+    optimizedFunction("C++")
+
+
+    //Edit eg.
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newList = document.createElement('li');      
+    newList.textContent = "Golang"          // Edit by using .textContent
+    secondLang.replaceWith(newList);
+
+
+
+    //Edit eg.
+    const Language = document.querySelector("li:nth-child(3)")
+    const thisList = document.createElement("li");
+    thisList.textContent="MySql"
+    Language.replaceWith(thisList);          //Edit using .replaceWith
+
+
+
+    //Edit eg.
+    const myLang = document.querySelector('li:first-child');
+    myLang.outerHTML = '<li>MongoDB</li>'     //Edit by using .outerHTML
+
+
+
+    //Edit eg.
+    const progLang = document.querySelector('li:nth-child(7)')
+    progLang.innerHTML="Swift"                //Edit by using .innerHTML
+    
+
+
+    //Remove
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+
+</html>
