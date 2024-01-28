@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Free Free Palestine</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+
+</body>
+<script>
+    const myDate= function(str){
+        console.log(str, Date.now());
+    }
+
+
+   const start = document.querySelector("#Start")
+   const stop = document.querySelector("#Stop")
+
+   let startInt;
+   start.addEventListener('click', function(){
+     startInt=setInterval(myDate,1000,"Hii");
+   })
+
+   stop.addEventListener('click',function(){
+    clearInterval(startInt);
+   })
+    
+</script>
+</html>
