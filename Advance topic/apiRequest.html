@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body{
+            background-color:#212121;
+        }
+   
+        /* .card{
+            height: 200px;
+            width: 150px;
+            background-color: #5f4444;
+        }
+
+        #photo{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        } */
+    </style> 
+</head>
+<body>
+    <!-- <div class="card">
+        <img id="photo" src="https://avatars.githubusercontent.com/u/144584066?v=4" alt="">
+        <div id="fCount">Followers:</div>
+        <button id="button">Click ME</button>
+    </div> -->
+</body>
+<script>
+
+    const requestUrl='https://api.github.com/users/ansari-bilal'
+    const xhr = new XMLHttpRequest();
+    let data="";
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = function()
+    {
+        if(xhr.readyState === 4)
+        {
+            data = JSON.parse(this.responseText) ;
+            console.log(data.followers);
+
+        }
+    }
+    xhr.send();
+
+
+</script>
+</html>
+
+
+// The below code will make a card and show the dp and when we click the button it will show the Followers count.
+
+  /*  const Follll=document.querySelector('#fCount');   
+    const fetchFoll=document.querySelector("#button");
+    fetchFoll.addEventListener('click',function()
+    {
+
+        const requestUrl='https://api.github.com/users/ansari-bilal'
+        const xhr = new XMLHttpRequest();
+        let data="";
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange = function()
+        {
+            if(xhr.readyState === 4)
+            {
+                data = JSON.parse(this.responseText) ;
+                Follll.innerHTML=`Followers: ${data.followers}`;
+
+            }
+        }
+        xhr.send();
+    });/*
